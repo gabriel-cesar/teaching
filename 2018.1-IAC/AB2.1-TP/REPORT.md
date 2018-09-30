@@ -3,19 +3,21 @@
 * Página do repositório do trabalho ([link GitHub](TODO)) 
 
 * Discente 1
-	* Nome: TODO
-	* Matrícula: TODO 
-	* Distribuição da nota (%): TODO
+	* Nome: Gabriel César Olimpio Alves
+	* Matrícula: 18110467
 * Discente 2
-	* Nome: TODO
-	* Matrícula: TODO
-	* Distribuição da nota (%): TODO
+	* Nome: Marcos Ivan de Almeida Melo
+	* Matrícula: 18110498
 * Discente 3
-	* Nome: TODO
-	* Matrícula: TODO
-	* Distribuição da nota (%): TODO		
+	* Nome: Yan Pires Siqueira Pequeno
+	* Matrícula: 18111784
+* Obs.: Distribuição igualitária da nota.
 	
 # Resultados
+
+## Utilização intensa da UCP
+
+## Utilização intensa da UCP e memória
 
 * TODO: Plotar um gráfico com os resultados das medições das seguintes métricas utilizadas para avaliar o comportamento do **processo filho**:
 	*  **UCP**: consumo da UCP em porcentagem.
