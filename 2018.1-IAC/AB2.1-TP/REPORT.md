@@ -1,7 +1,6 @@
 # Identificação
 
-* Página do repositório do trabalho do
-# <a href="https://github.com/gabriel-cesar/teaching)"> GitHub</a>
+* Página do repositório do trabalho do <a href="https://github.com/gabriel-cesar/teaching"> GitHub</a>
 
 * Discente 1
 	* Nome: Gabriel César Olimpio Alves
