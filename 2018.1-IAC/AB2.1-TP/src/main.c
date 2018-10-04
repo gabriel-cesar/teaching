@@ -22,40 +22,73 @@ int main (int argc, char *argv[], char *envp[]) {
         //this 3 sprintf functions format the used commands
         sprintf(usage_cpu, "%s%d%s", "ps -p ", pid, " -o pcpu | sed 1d | tr -d ' '");  //script to result CPU
         sprintf(usage_mem, "%s%d%s", "pmap -x ", pid, " | grep total | awk '{print $4}'");  //script to result RAM
-        sprintf(kill, "%s%d", "kill -9 ", pid);
+        sprintf(kill, "%s%d", "kill -9 ", pid); //script to kill the process
 
-        for(i = 0; i <= 10; i++) {
-        	printf("Time: %ds\n", i);
-            printf("CPU usage(%%)\n");
+        if(strcmp(argv[1], "ucp") == 0) {
+            for(i = 0; i <= 10; i++) {
+                system("clear");
+                printf("------Process with intense CPU usage ------\n");
+                printf("Time: %ds\n", i);
 
-            system(usage_cpu); //running the cpu usage command
-            printf("MEM usage(kbps)\n");
+                printf("CPU usage(%%)\n");
+                system(usage_cpu); //running the cpu usage command
+    
+                printf("MEM usage(kbps)\n");
+                system(usage_mem); //running the memory usage command
 
-            system(usage_mem); //running the memory usage command
-            printf("------\n");
+                sleep(1); //waits one second
+            }    
+        }
 
-            sleep(1); //waits one second
+        else if(strcmp(argv[1], "ucp-mem") == 0){
+            for(i = 0; i <= 10; i++) {
+                system("clear");
+                printf("------ Process with intense CPU and memory usage ------\n");
+                printf("Time: %ds\n", i);
+
+                printf("CPU usage(%%)\n");
+                system(usage_cpu); //running the cpu usage command
+
+                printf("MEM usage(kbps)\n");
+                system(usage_mem); //running the memory usage command
+
+                sleep(1); //waits one second
+            }   
+        }
+
+        else {
+            printf("The arguments are invalid, please try with 'ucp' or 'ucp-mem'\n");
         }
 
         system(kill); //running the killing command
 	}
 
 	else { //else I'm the son process
-		if(strcmp(argv[1], "ucp") == 0) {
-		    for( ; ; ){
-		    	// usleep(1000);
+        if(strcmp(argv[1], "ucp") == 0) {
+            for( ; ; ){
+		    	usleep(1000);
 		    }
-		}
+            
+            perror ("Erro: "); //execve didn't work
+            printf ("Finished!\n");
+            exit(0); //terminates the process with success (code 0) */
+    	}
  
         if(strcmp(argv[1], "ucp-mem") == 0) {
             for ( ; ; ){
                 malloc(sizeof(int));
                 usleep(1000);
             }
+
+            perror ("Erro") ; //execve didn't work
+            printf ("Finished!\n");
+            exit(0); //terminates the process with success (code 0) */
 		}
+
+        else{
+            perror ("Erro"); //execve didn't work
+        }
 	}
 
-	perror ("Erro") ; //execve didn't work
- 	printf ("Finished!\n") ;
-	exit(0) ; //terminates the process with success (code 0) */
+	
  }
