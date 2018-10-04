@@ -27,13 +27,13 @@ int main (int argc, char *argv[], char *envp[]) {
         for(i = 0; i <= 10; i++) {
         	printf("Time: %ds\n", i);
             printf("CPU usage(%%)\n");
-            
+
             system(usage_cpu); //running the cpu usage command
             printf("MEM usage(kbps)\n");
-            
+
             system(usage_mem); //running the memory usage command
             printf("------\n");
-            
+
             sleep(1); //waits one second
         }
 
@@ -43,14 +43,14 @@ int main (int argc, char *argv[], char *envp[]) {
 	else { //else I'm the son process
 		if(strcmp(argv[1], "ucp") == 0) {
 		    for( ; ; ){
-		    	usleep(100);
+		    	// usleep(1000);
 		    }
 		}
  
         if(strcmp(argv[1], "ucp-mem") == 0) {
             for ( ; ; ){
-                malloc(sizeof(100000));
-                usleep(100);
+                malloc(sizeof(int));
+                usleep(1000);
             }
 		}
 	}

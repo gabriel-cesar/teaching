@@ -1,6 +1,6 @@
 # Identificação
 
-* Página do repositório do trabalho ([link GitHub](TODO)) 
+* Página do repositório do trabalho ([link GitHub](https://github.com/gabriel-cesar/teaching)) 
 
 * Discente 1
 	* Nome: Gabriel César Olimpio Alves
@@ -17,6 +17,8 @@
 
 ## Utilização intensa da UCP
 
+*
+
 ## Utilização intensa da UCP e memória
 
 * TODO: Plotar um gráfico com os resultados das medições das seguintes métricas utilizadas para avaliar o comportamento do **processo filho**:
@@ -27,7 +29,7 @@
 
 
 # Discussão
-
+	
 ## Utilização intensa da UCP
 
 TODO: explicar se o comportamento da curva **UCP** foi o esperado, sempre justificando sua resposta, referenciando o código fonte do programa e o gráfico do experimento realizado.
