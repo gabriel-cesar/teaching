@@ -1,5 +1,5 @@
-#Teaching
+#Professor André Lage
 
-##Naming
+##Gabriel César Olimpio Alves
 
-[year].[semester]-[class]-[subject]
+2018.1 - Ciências da Computação - Introdução à computação
