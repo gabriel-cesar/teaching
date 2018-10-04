@@ -45,7 +45,7 @@
 
 * Com as mudanças já efetuadas, pudemos notar uma diminuição absurda na utilização da UCP. Lembrando que, para quaisquer que sejam os valores de parâmetro da função “usleep()”, a constância dos resultados se mantém, ou seja, a alteração do valor apenas altera o tempo em que o programa será pausado, alterando, assim, o valor de utilização da UCP, sendo essa relação inversamente proporcional.
 	
-	<img src="images/high_cpu.jpg"> <img src="images/low_cpu.jpg">
+	<img src="images/high_ucp.jpg"> <img src="images/low_ucp.jpg">
 
 * Analisando o gráfico presente na figura 2, é fácil ver que a UCP sofreu de uma ligeira alteração na utilização ao longo do tempo, sendo essa alteração de forma quase que constante, assemelhando-se ao gráfico de uma função afim. Lembrando também que a utilização da UCP reduziu-se bastante com a introdução do comando “usleep()”.
 

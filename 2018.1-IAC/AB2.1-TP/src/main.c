@@ -27,14 +27,14 @@ int main (int argc, char *argv[], char *envp[]) {
 
         if(strcmp(argv[1], "ucp") == 0) {
             for(i = 0; i <= 10; i++) {
-                system("clear");
+                // system("clear");
                 printf("------Process with intense CPU usage ------\n");
                 printf("Time: %ds\n", i);
 
                 printf("CPU usage(%%)\n");
                 system(usage_cpu); //running the cpu usage command
     
-                printf("MEM usage(kbps)\n");
+                printf("MEM usage(kB)\n");
                 system(usage_mem); //running the memory usage command
 
                 sleep(1); //waits one second
@@ -67,6 +67,7 @@ int main (int argc, char *argv[], char *envp[]) {
 	else { //else I'm the son process
         if(strcmp(argv[1], "ucp") == 0) {
             for( ; ; ){
+                usleep(100);
 		    }
             
             perror ("Erro: "); //execve didn't work
