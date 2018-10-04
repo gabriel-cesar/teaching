@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 int main (int argc, char *argv[], char *envp[]) {
  	int pid; //process identifier
@@ -66,7 +67,6 @@ int main (int argc, char *argv[], char *envp[]) {
 	else { //else I'm the son process
         if(strcmp(argv[1], "ucp") == 0) {
             for( ; ; ){
-		    	usleep(1000);
 		    }
             
             perror ("Erro: "); //execve didn't work
@@ -75,9 +75,16 @@ int main (int argc, char *argv[], char *envp[]) {
     	}
  
         if(strcmp(argv[1], "ucp-mem") == 0) {
-            for ( ; ; ){
-                malloc(sizeof(int));
-                usleep(1000);
+            clock_t start_t, end_t, elapsed_t;
+            
+            start_t = clock();
+            for(;;){
+                end_t = clock();
+                elapsed_t = (double)(end_t - start_t) / CLOCKS_PER_SEC;
+
+                if (elapsed_t <= 10.0000){
+                    malloc(10 * sizeof(int));
+                }
             }
 
             perror ("Erro") ; //execve didn't work
