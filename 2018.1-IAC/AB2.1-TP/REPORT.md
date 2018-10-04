@@ -45,10 +45,10 @@
 
 * Com as mudanças já efetuadas, pudemos notar uma diminuição absurda na utilização da UCP. Lembrando que, para quaisquer que sejam os valores de parâmetro da função “usleep()”, a constância dos resultados se mantém, ou seja, a alteração do valor apenas altera o tempo em que o programa será pausado, alterando, assim, o valor de utilização da UCP, sendo essa relação inversamente proporcional.
 	
-	<p>Figura 1	
+	<p>Figura 1	<br>
 		<img src="images/high_ucp.jpg"> 
 	</p>
-	<p>Figura 2
+	<p>Figura 2 <br>
 		<img src="images/low_ucp.jpg">
 	</p>
 
