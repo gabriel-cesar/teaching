@@ -1,6 +1,7 @@
 # Identificação
 
-* Página do repositório do trabalho ([link GitHub](https://github.com/gabriel-cesar/teaching)) 
+* Página do repositório do trabalho do
+# <a href="https://github.com/gabriel-cesar/teaching)"> GitHub</a>
 
 * Discente 1
 	* Nome: Gabriel César Olimpio Alves
@@ -12,7 +13,7 @@
 	* Nome: Yan Pires Siqueira Pequeno
 	* Matrícula: 18111784
 * Obs.: Distribuição igualitária da nota.
-	
+
 # Resultados
 
 ## Utilização intensa da UCP
