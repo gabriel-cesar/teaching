@@ -17,7 +17,18 @@
 
 ## Utilização intensa da UCP
 
-*
+* Para a compilação do programa, sugerimos que seja feito com a seguinte estrutura.
+	<p><ul>
+			<li>gcc main.c -o main</li>
+		</ul>
+	</p>
+* Para a execução do mesmo, a estrutura será da seguinte maneira.
+	<p>
+		<ul>
+			<li>./main ucp</li>
+			<li>./main ucp-mem</li>
+		</ul>
+	</p>
 
 ## Utilização intensa da UCP e memória
 
