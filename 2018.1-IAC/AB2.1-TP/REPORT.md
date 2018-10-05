@@ -18,11 +18,12 @@
 ## Compilação e execução:
 
 * Para a compilação do programa, sugerimos que seja feito com a seguinte estrutura.
-	<p><ul>
+	<p>
+		<ul>
 			<li>gcc main.c -o main</li>
 		</ul>
 	</p>
-* Para a execução do mesmo, a estrutura será da seguinte maneira.
+* Para a execução do mesmo, as estruturas serão das seguintes maneiras.
 	<p>
 		<ul>
 			<li>./main ucp</li>
@@ -52,7 +53,7 @@
 		<img src="images/low_ucp.jpg">
 	</p>
 
-* Analisando o gráfico presente na figura 2, é fácil ver que a UCP sofreu de uma ligeira alteração na utilização ao longo do tempo, sendo essa alteração de forma quase que constante, assemelhando-se ao gráfico de uma função afim. Lembrando também que a utilização da UCP reduziu-se bastante com a introdução do comando “usleep()”.
+* Analisando o gráfico presente na figura 2, é fácil ver que a UCP sofreu de uma grande alteração na utilização em relação ao teste anterior e permanecendo quase que constante durante todo o processo. Dessa forma, optamos por remover o comando "usleep()", pois é necessario o uso intenso da CPU nesse teste.
 
 ## Utilização intensa da UCP e memória
 
