@@ -44,10 +44,10 @@
 		usleep(100);
 	}
 
-* Com as mudanças já efetuadas, pudemos notar uma diminuição absurda na utilização da UCP. Lembrando que, para quaisquer que sejam os valores de parâmetro da função “usleep()”, a constância dos resultados se mantém, ou seja, a alteração do valor apenas altera o tempo em que o programa será pausado, alterando, assim, o valor de utilização da UCP, sendo essa relação inversamente proporcional.
-	
+* Com as mudanças já efetuadas, pudemos notar uma diminuição absurda na utilização da UCP (Figura 2). Lembrando que, para quaisquer que sejam os valores de parâmetro da função “usleep()”, a constância dos resultados se mantém, ou seja, a alteração do valor apenas altera o tempo em que o programa será pausado, alterando, assim, o valor de utilização da UCP, sendo essa relação inversamente proporcional.
+
 	<p>Figura 1	<br>
-		<img src="images/high_ucp.jpg"> 
+		<img src="images/high_ucp1.jpg"> 
 	</p>
 	<p>Figura 2 <br>
 		<img src="images/low_ucp.jpg">
@@ -63,25 +63,45 @@
 	}
 
 * Assim como no experimento anterior, percebemos dificuldade por parte do computador, porém, agora, ocorreu um travamento, precisando forçar o desligamento, pois agora, além da utilização da UCP, estava ocorrendo de forma simultânea um alocamento de memória de forma elevada, gerado pela função “malloc()”. Após isso, resolvemos tomar a mesma medida e adicionar o comando “usleep()”, ficando com a seguinte face.
-	
+
 	* for ( ; ; ){
 		malloc (sizeof (int) );
 		usleep (100);
 	}
 
-* Os valores obtidos com a medição da utilização da UCP e da memória estão representados no gráfico da figura 3.
+* Como no teste da UCP, conseguimos limitar o uso dela e da memória ao acrescentar o comando “usleep()” (Figura 3 e 4). Porém, como no teste anterior, houve uma drástica redução e, como não era o propósito do teste, tivemos que alterá-lo usando os seguintes comando:
+	* clock_t start_t, end_t, elapsed_t;
+        start_t = clock(); 
+        for(;;){
+            end_t = clock(); 
+            elapsed_t = (double)(end_t - start_t) / CLOCKS_PER_SEC;
+            if (elapsed_t <= 10.0000){
+                malloc(10 * sizeof(int));
+            }
+        }
+* E assim, obtivemos uma alta alocação de memória e um alto uso da UCP (Figura 5 e 6).
 
-<img src="images/cpu_mem.jpg">
+<p>Figura 3<br>
+	<img src="images/figura3.jpg">		
+</p>
 
-* TODO: Plotar um gráfico com os resultados das medições das seguintes métricas utilizadas para avaliar o comportamento do **processo filho**:
-	*  **UCP**: consumo da UCP em porcentagem.
-	*  **UCP-MEM**: consumo da memória principal em Kilobytes.
-* TODO: Cada métrica deve ser plotada em duas curvas separadas.
-* TODO: o eixo das abscissas deve representar o tempo medido a cada segundo e o eixo das coordenadas deve representar a métrica medida.
+<p>Figura 4<br>
+	<img src="images/figura4.jpg">
+</p>
+
+<p>Figura 5<br>
+	<img src="images/figura5.jpg">
+</p>
+
+<p>Figura 6<br>
+	<img src="images/figura6.jpg">
+</p>
 
 # Discussão
 	
 ## Utilização intensa da UCP
+
+* 
 
 TODO: explicar se o comportamento da curva **UCP** foi o esperado, sempre justificando sua resposta, referenciando o código fonte do programa e o gráfico do experimento realizado.
 
