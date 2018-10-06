@@ -5,4 +5,4 @@
 	<li>./main</li>
 </ol>
 
-<p>The argv response to "cpu" and "cpu-mem"</p>
+<p>The argv response to "ucp" and "ucp-mem"</p>
