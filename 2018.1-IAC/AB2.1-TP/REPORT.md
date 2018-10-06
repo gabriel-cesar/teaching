@@ -101,10 +101,14 @@
 	
 ## Utilização intensa da UCP
 
-* 
-
-TODO: explicar se o comportamento da curva **UCP** foi o esperado, sempre justificando sua resposta, referenciando o código fonte do programa e o gráfico do experimento realizado.
+* Em ambos os testes, obtivemos os resultados esperados, pois sem a utilização do comando "usleep()" resultou em um elevado uso da UCP e com tal comando, um baixo uso da mesma, ficando aproximadamente constante durante toda a execução.
 
 ## Utilização intensa da UCP e memória
 
-TODO: explicar se o comportamento da curva **UCP-MEM** foi o esperado, sempre justificando sua resposta, referenciando o código fonte do programa e o gráfico do experimento realizado.
+* Para testar com um intenso uso da UCP e memória, tivemos que fazer três testes:
+	
+	* Primeiramente, foi utilizado o comando "for" com uma alocação de memória resultante do comando "malloc()". Resultou no travamento da máquina de testes, pois a memória alocada excedeu o limite da mesma.
+
+	* Após isso, adicionamos o comando "usleep()", e com isso, os usos da UCP e memória foram reduzidos. Porém, não era o objetivo requisitado do trabalho.
+
+	* Então, para finalizar, com uso da função "clock()", alcançamos o objetivo proposto. Assim, deixamos o uso da UCP e memória elevados, sem ocorrer o sobrecarregamento da máquina.
