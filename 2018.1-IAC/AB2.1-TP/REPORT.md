@@ -13,9 +13,7 @@
 	* Matrícula: 18111784
 * Obs.: Distribuição igualitária da nota.
 
-# Resultados
-
-## Compilação e execução:
+# Compilação e execução:
 
 * Para a compilação do programa, sugerimos que seja feito com a seguinte estrutura.
 	<p>
@@ -30,6 +28,8 @@
 			<li>./main ucp-mem</li>
 		</ul>
 	</p>
+
+# Resultados
 
 ## Utilização intensa da UCP
 
